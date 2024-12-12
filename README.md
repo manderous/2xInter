@@ -1,5 +1,5 @@
 # 2xInter
-This project includes the code implemented with PyTorch and the paper 'Prototype-based Prompt-Instance Interaction with Causal Intervention for Few-shot Event Detection' published at The 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024).<br>
+This project includes the code implemented with PyTorch and the paper **Prototype-based Prompt-Instance Interaction with Causal Intervention for Few-shot Event Detection** published at The 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (**LREC-COLING 2024**).<br>
 https://aclanthology.org/2024.lrec-main.1161.pdf
 
 Run the model:
