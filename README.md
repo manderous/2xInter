@@ -15,22 +15,22 @@ pip install gpustat
  ```
 
 ## 主实验运行代码
-### 生成提示模板，生成模板的形式为“上下文+触发词+事件类型”：
+### 1. 生成提示模板，生成模板的形式为“上下文+触发词+事件类型”：
  ```
 python tools/generate_template_ace_argument.py --output_dir my_auto_template --task_name ACE --seed 13 21 42 87 100 --t5_model t5-3b --beam 100
  ```
 
-### 生成句子的提示模板的“bart token id”和“mask id”：
+### 2. 生成句子的提示模板的“bart token id”和“mask id”：
  ```
 python ./datasets/template_multi_generate_argument_bart.py
  ```
 
-### 读取句子和提示模板的“bart token id”和“mask id”：
+### 3. 读取句子和提示模板的“bart token id”和“mask id”：
  ```
 python fsl_bart_contra.py --dataset ace -n 5 -k 5 --encoder bart_contra_multipos --model proto_bart_contra --bert_pretrained /root/fsl-proact-main/bart-base
  ```
 
-### 我们的2xInter模型进行小样本事件检测任务：
+### 4. 我们的2xInter模型进行小样本事件检测任务：
 1) RAMS数据集，5-way-5-shot设置（消耗显存：49651M）：
  ```
 python fsl_bart_contra.py --dataset rams -n 5 -k 5 --encoder bart_contra_multipos --model proto_bart_contra --bert_pretrained /root/fsl-proact-main/bart-base
@@ -52,17 +52,17 @@ python fsl_bart_contra.py --dataset rams -n 10 -k 10 --encoder bart_contra_multi
  ```
 
 ## 消融实验代码
-### “2xInter w/o DVCI”模型，对于ACE数据集，5-way-5-shot设置（消耗显存：16485M）：
+1)  “2xInter w/o DVCI”模型，对于ACE数据集，5-way-5-shot设置（消耗显存：16485M）：
  ```
 python fsl_bart.py --dataset ace -n 5 -k 5 --encoder bart_base --model proto_bart --bert_pretrained facebook/bart-base
  ```
 
-### “2xInter w/o II”模型，对于ACE数据集，5-way-5-shot设置（消耗显存：20515M）：
+2)  “2xInter w/o II”模型，对于ACE数据集，5-way-5-shot设置（消耗显存：20515M）：
  ```
 python fsl_bart.py --dataset ace -n 5 -k 5 --encoder bart_contra --model proto_bart --bert_pretrained facebook/bart-base
  ```
 
-### “2xInter w/o PI”模型，对于ACE数据集，5-way-5-shot设置（消耗显存：37783M）：
+3)  “2xInter w/o PI”模型，对于ACE数据集，5-way-5-shot设置（消耗显存：37783M）：
  ```
 python fsl_bart_contra.py --dataset ace -n 5 -k 5 --encoder bart_contra_multipos --model proto_bart_contra --bert_pretrained /root/fsl-proact-main/bart-base --PI_num 1
  ```
