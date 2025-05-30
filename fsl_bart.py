@@ -67,12 +67,12 @@ def main(args):
     # encoder = encoder_class[args.encoder].from_pretrained(args.bert_pretrained, from_tf=True, config=config)
     encoder = encoder_class[args.encoder].from_pretrained(args.bert_pretrained, config=config)
     # encoder = encoder_class[args.encoder](args=args)
-    encoder.init_weight()  # tjy 暂时没有定义init_weight()函数
+    encoder.init_weight()
 
     fsl_model = fsl_class[args.model](encoder, args)
     # print(fsl_model)
     # exit(0)
-    # fsl_model.init_weight()  # tjy 暂时没有定义init_weight()函数
+    # fsl_model.init_weight()
     fsl_model.cuda()
 
     wsd_model = None
