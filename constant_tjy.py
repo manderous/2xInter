@@ -16,7 +16,7 @@ dataset_constant = {
         'max_length': 40,
         'n_class': 34,
         'other': 1,  # Means has other class, doing event detection
-        'train_way': 18,  # 原文是18，我把other类去除的话，就是17
+        'train_way': 18,
     },
     'fed': {
         'max_length': 40,
@@ -82,33 +82,12 @@ feature_map = {
                        'transform',
                        'dep', 'prune_footprint',
                        'prune_dep'],
-    # 'bart_base': ['i', 'target', 'enc_input_ids', 'enc_mask_ids', 'dec_prompt_ids_0', 'dec_prompt_mask_ids_0',
-    #               'mask_index_0', 'dec_prompt_ids_1', 'dec_prompt_mask_ids_1', 'mask_index_1', 'dec_prompt_ids_2',
-    #               'dec_prompt_mask_ids_2', 'mask_index_2', 'dec_prompt_ids_3', 'dec_prompt_mask_ids_3', 'mask_index_3',
-    #               'dec_prompt_ids_4', 'dec_prompt_mask_ids_4', 'mask_index_4'],  # 5个样本
     'bart_base': ['i', 'target', 'enc_input_ids', 'enc_mask_ids', 'dec_prompt_ids_0', 'dec_prompt_mask_ids_0',
                   'mask_index_0', 'dec_prompt_ids_1', 'dec_prompt_mask_ids_1', 'mask_index_1', 'dec_prompt_ids_2',
                   'dec_prompt_mask_ids_2', 'mask_index_2'],  # 5个样本
-
-    # 'bart_verb': ['i', 'target', 'enc_input_ids', 'enc_mask_ids', 'dec_prompt_ids_0', 'dec_prompt_mask_ids_0',
-    #                   'mask_index_0', 'dec_prompt_ids_1', 'dec_prompt_mask_ids_1', 'mask_index_1', 'dec_prompt_ids_2',
-    #                   'dec_prompt_mask_ids_2', 'mask_index_2'],  # 5个样本
-
-    # # 4个样本
-    # 'bart_base': ['i', 'target', 'enc_input_ids', 'enc_mask_ids', 'dec_prompt_ids_0', 'dec_prompt_mask_ids_0',
-    #               'mask_index_0', 'dec_prompt_ids_1', 'dec_prompt_mask_ids_1', 'mask_index_1', 'dec_prompt_ids_2',
-    #               'dec_prompt_mask_ids_2', 'mask_index_2', 'dec_prompt_ids_3', 'dec_prompt_mask_ids_3', 'mask_index_3'],
-    # 'bart_contra': ['i', 'target', 'enc_input_ids', 'enc_mask_ids', 'dec_prompt_ids_0', 'dec_prompt_mask_ids_0',
-    #               'mask_index_0', 'dec_prompt_ids_1', 'dec_prompt_mask_ids_1', 'mask_index_1', 'dec_prompt_ids_2',
-    #               'dec_prompt_mask_ids_2', 'mask_index_2', 'dec_prompt_ids_3', 'dec_prompt_mask_ids_3', 'mask_index_3',
-    #               'dec_prompt_ids_4', 'dec_prompt_mask_ids_4', 'mask_index_4'],  # 5个样本
     'bart_contra': ['i', 'target', 'enc_input_ids', 'enc_mask_ids', 'dec_prompt_ids_0', 'dec_prompt_mask_ids_0',
                   'mask_index_0', 'dec_prompt_ids_1', 'dec_prompt_mask_ids_1', 'mask_index_1', 'dec_prompt_ids_2',
                   'dec_prompt_mask_ids_2', 'mask_index_2'],  # 5个样本
-    # 'bart_contra_multipos': ['i', 'target', 'enc_input_ids', 'enc_mask_ids', 'dec_prompt_ids_0', 'dec_prompt_mask_ids_0',
-    #               'mask_index_0', 'dec_prompt_ids_1', 'dec_prompt_mask_ids_1', 'mask_index_1', 'dec_prompt_ids_2',
-    #               'dec_prompt_mask_ids_2', 'mask_index_2', 'dec_prompt_ids_3', 'dec_prompt_mask_ids_3', 'mask_index_3',
-    #               'dec_prompt_ids_4', 'dec_prompt_mask_ids_4', 'mask_index_4'],  # 5个样本
     'bart_contra_multipos': ['i', 'target', 'enc_input_ids', 'enc_mask_ids', 'dec_prompt_ids_0', 'dec_prompt_mask_ids_0',
                   'mask_index_0', 'dec_prompt_ids_1', 'dec_prompt_mask_ids_1', 'mask_index_1', 'dec_prompt_ids_2',
                   'dec_prompt_mask_ids_2', 'mask_index_2'],  # 3个样本
