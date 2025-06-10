@@ -3,7 +3,7 @@ This project includes the code implemented with PyTorch and the paper **Prototyp
 该工程为论文**Prototype-based Prompt-Instance Interaction with Causal Intervention for Few-shot Event Detection**的代码，该文章发表至**LREC-COLING 2024**会议。<br>
 https://aclanthology.org/2024.lrec-main.1161.pdf
 
-![image](logo_cover_photo/2xInter_cover_photo.jpg)
+![image](logo_cover_photo/2xInter_Cover_photo.jpg)
 
 ## 环境要求
  ```
