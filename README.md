@@ -17,7 +17,7 @@ pip install loralib
 pip install gpustat
  ```
 
-## 主实验运行代码
+## 主实验运行代码（Main Experiment）
 ### 1. 生成提示模板，生成模板的形式为“上下文+触发词+事件类型”：
  ```
 python tools/generate_template_ace_argument.py --output_dir my_auto_template --task_name ACE --seed 13 21 42 87 100 --t5_model t5-3b --beam 100
@@ -54,7 +54,7 @@ python fsl_bart_contra.py --dataset rams -n 5 -k 5 --encoder bart_contra_multipo
 python fsl_bart_contra.py --dataset rams -n 10 -k 10 --encoder bart_contra_multipos --model proto_bart_contra --bert_pretrained /root/fsl-proact-main/bart-base
  ```
 
-## 消融实验代码
+## 消融实验代码（Ablation Studies）
 1)  “2xInter w/o DVCI”模型，对于ACE数据集，5-way-5-shot设置（消耗显存：16485M）：
  ```
 python fsl_bart.py --dataset ace -n 5 -k 5 --encoder bart_base --model proto_bart --bert_pretrained facebook/bart-base
@@ -72,7 +72,7 @@ python fsl_bart_contra.py --dataset ace -n 5 -k 5 --encoder bart_contra_multipos
 “PI_num”参数用于设置提示的数量，当“PI_num=1”时，一个样本仅拼接一个提示，因此为消融“提示干预模块”后的结果。
 
 
-## 模型保存
+## 模型保存（Saved Models）
 checkpoints中保存的模型：https://drive.google.com/drive/folders/1Jonooj5luS8iPt5WH3t6Hsbf-YN5sbSo?usp=drive_link
 
 ## December 2024 update
