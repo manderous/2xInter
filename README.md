@@ -1,6 +1,7 @@
-# 2xInter
+# Prototype-based Prompt-Instance Interaction with Causal Intervention for Few-shot Event Detection (2xInter)
+# 基于提示交互和因果干预的小样本事件检测方法
 This project includes the code implemented with PyTorch and the paper **Prototype-based Prompt-Instance Interaction with Causal Intervention for Few-shot Event Detection** published at The 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (**LREC-COLING 2024**).<br>
-该工程为论文**Prototype-based Prompt-Instance Interaction with Causal Intervention for Few-shot Event Detection**的代码，该文章发表至**LREC-COLING 2024**会议。<br>
+该工程为论文**基于提示交互和因果干预的小样本事件检测方法**的代码，该文章发表至**LREC-COLING 2024**会议。<br>
 https://aclanthology.org/2024.lrec-main.1161.pdf
 
 ![image](logo_cover_photo/2xInter_Cover_photo.jpg)
